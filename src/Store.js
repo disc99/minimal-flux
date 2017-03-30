@@ -4,7 +4,6 @@ class Store extends Emitter {
     constructor(dispatcher) {
         super();
         this.count = 0;
-        // <--- observe event.
         dispatcher.on("countUp", this.onCountUp.bind(this));
     }
 
@@ -17,7 +16,6 @@ class Store extends Emitter {
             return;
         }
         this.count = count;
-        // emit "CHANGE" ---> self
         this.emit("CHANGE");
     }
 }
