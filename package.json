@@ -4,8 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "browserify -d -e src/App.js -t [ babelify --loose es6.classes ]  -o build.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "react": "^15.4.2"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.24.0",
+    "babel-plugin-espower": "^2.3.2",
+    "babelify": "^7.3.0",
+    "browserify": "^14.1.0"
+  }
 }
